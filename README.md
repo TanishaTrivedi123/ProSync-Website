@@ -1,8 +1,8 @@
 🚀 ProSync – Client Project Showcase Website
 ProSync is a modern, responsive, animated portfolio/project showcase website for a client-based organization or team. It supports dynamic project uploads via an admin panel, image hosting using Cloudinary, and is built using the MERN Stack.
 
-🟢 Live Site: https://prosync-client.onrender.com
-🟣 Backend API: https://prosync-api.onrender.com
+🟢 Live Site: https://prosync-website-1.onrender.com
+🟣 Backend API: https://prosync-website.onrender.com
 
 🛠️ Tech Stack
 🔹 Frontend
