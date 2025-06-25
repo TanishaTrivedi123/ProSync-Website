@@ -30,7 +30,7 @@ const OurProjects = () => {
         </p>
 
         {/* Dynamic Card Section */}
-        <div className="flex overflow-x-auto gap-6 pb-4 scrollbar-thin scrollbar-thumb-gray-400">
+        <div className="flex overflow-x-auto gap-6 pb-4 no-scrollbar ">
           {projects.length === 0 ? (
             <div className="w-full h-[200px] flex items-center justify-center">
               <p className="text-gray-600 text-lg font-medium">

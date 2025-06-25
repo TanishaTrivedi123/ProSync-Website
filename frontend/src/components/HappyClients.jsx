@@ -44,7 +44,7 @@ const HappyClients = () => {
         {error && <p className="text-red-500">{error}</p>}
 
         {/* Scrollable Cards */}
-        <div className="flex overflow-x-auto gap-6 pb-4 px-1 scrollbar-thin scrollbar-thumb-gray-400">
+        <div className="flex overflow-x-auto gap-6 pb-4 px-1 no-scrollbar">
           {clients.map((client) => (
             <div
               key={client._id}
@@ -52,7 +52,7 @@ const HappyClients = () => {
             >
               {/* Image */}
               <img
-                src={client.image.url}
+                src={client.image?.url}
                 alt={client.name}
                 className="w-16 h-16 object-cover rounded-full border-4 border-white shadow-md mb-2"
               />
@@ -63,7 +63,7 @@ const HappyClients = () => {
               {/* Name & Designation aligned left */}
               <div className="w-full text-left">
                 <h3 className="text-base font-semibold text-[#1E3A8A]">
-                  {client.name}
+                  {client.designation}
                 </h3>
                 <p className="text-sm text-gray-500">{client.designation}</p>
               </div>

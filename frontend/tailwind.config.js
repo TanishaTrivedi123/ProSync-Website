@@ -9,5 +9,18 @@ export default {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addUtilities }) {
+      addUtilities({
+        ".no-scrollbar": {
+          /* Firefox */
+          "scrollbar-width": "none",
+          /* Chrome, Safari, Opera */
+          "&::-webkit-scrollbar": {
+            display: "none",
+          },
+        },
+      });
+    },
+  ],
 };
