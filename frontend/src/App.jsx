@@ -45,7 +45,7 @@ const App = () => {
           }
         />
 
-        <Route path="/admin" element={<Admin />} />
+        <Route path="/admin" element={<ProtectedRoute element={<Admin />} />} />
         <Route
           path="/EnterPage"
           element={<ProtectedRoute element={<EnterPage />} />}
