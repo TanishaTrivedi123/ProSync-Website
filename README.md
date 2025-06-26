@@ -60,7 +60,7 @@ Direct routes like `/admin` (without `#`) will not work on deployed hosting like
 
 🧪 **Test Admin Credentials**
 
-
+Password: Tanisha@0611
 
 
 ✨ **Admin Panel Features**
