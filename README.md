@@ -1,144 +1,109 @@
-🚀 ProSync – Client Project Showcase Website
-ProSync is a modern, responsive, animated portfolio/project showcase website for a client-based organization or team. It supports dynamic project uploads via an admin panel, image hosting using Cloudinary, and is built using the MERN Stack.
+# 🚀 ProSync – Client Project Showcase Website
 
-🟢 Live Site: https://prosync-website-1.onrender.com
-🟣 Backend API: https://prosync-website.onrender.com
+ProSync is a modern, responsive, animated portfolio/project showcase website built for client-based organizations or teams. It allows dynamic project uploads via an admin panel, image hosting using Cloudinary, and seamless performance using the MERN Stack.
 
-🛠️ Tech Stack
-🔹 Frontend
-React.js
+---
 
-Tailwind CSS
+## 🧠 Core Features
 
-React Router DOM
+- 🖼️ Upload and showcase projects (name, description, image)
+- 💾 Images stored securely on Cloudinary
+- 🔒 Admin-protected upload panel
+- 🎨 Animated, responsive UI with Framer Motion and GSAP
+- 🔁 Smooth scrolling using HashLink
+- ⚙️ Dynamic project rendering on frontend
 
-Framer Motion (animations)
+---
 
-Redux Toolkit (admin state)
+## 🛠️ Tech Stack
 
-React Icons
+### 🔹 Frontend
+- React.js
+- Tailwind CSS
+- React Router DOM (with `HashRouter`)
+- Redux Toolkit (admin state)
+- Framer Motion
+- Toastify
+- React Icons
+- GSAP
+- React Router HashLink
 
-Toastify (notifications)
+### 🔹 Backend
+- Node.js + Express.js
+- MongoDB + Mongoose
+- Multer + multer-storage-cloudinary
+- Cloudinary (for image uploads)
+- dotenv + CORS
 
-GSAP
+---
 
-HashLink (smooth scrolling)
+## 🔗 Deployed URLs
 
-🔹 Backend
-Node.js + Express.js
+- 🌐 **Live Site**: https://prosync-website-1.onrender.com
+- ⚙️ **Backend API**: https://prosync-website.onrender.com
 
-MongoDB + Mongoose
+---
 
-Multer + Cloudinary (via multer-storage-cloudinary)
+## 🔐 Admin Panel Access
 
-dotenv + CORS
+The website includes a protected admin panel for managing project uploads. Admins can log in and add new projects (with name, description, and image), which are immediately reflected on the homepage.
 
-🔐 Admin Panel
-✨ Used to upload new projects with image, name, and description.
+📍 **Access Admin Panel**  
+To open the admin panel, use this URL format:
 
-Credentials
-Username: Tanisha
 
-Password: Tanisha@0611
 
-🔒 The admin panel is protected using localStorage and auto-logout based on a timestamp expiration.
 
-If a non-admin tries to access /addproject, they will be redirected to /admin.
+⚠️ **Important**:  
+This project uses `HashRouter`. You **must include the `#` symbol** in the route (`/#/admin`).  
+Direct routes like `/admin` (without `#`) will not work on deployed hosting like Render.
 
-🧩 Core Features
-🖼️ Upload and showcase projects (name + description + image)
+🧪 **Test Admin Credentials**
 
-💾 Images stored securely on Cloudinary
 
-🔒 Admin-protected upload page
 
-🎨 Animated, responsive UI
 
-⚙️ Dynamic project rendering on frontend
+✨ **Admin Panel Features**
 
-🔁 Smooth page scroll with HashLink
+- 🔐 Secure login system using `localStorage`
+- ⏱️ Auto-logout after session timeout
+- 📤 Upload new projects (name + description + image)
+- 📂 Images stored in Cloudinary under `ProSyncClients`
+- 👁️ View uploaded projects instantly on homepage
 
-🌐 Folder Structure
-bash
-Copy
-Edit
+🧭 **Admin Routes** (Must be accessed using `#`)
+- `/#/admin` → Login page
+- `/#/add-projects` → Upload new project
+- `/#/add-clients` → Add clients
+- `/#/view-contact-data` → View contact form submissions
+- `/#/EnterPage` → Protected admin dashboard
+
+🚫 Unauthorized users are auto-redirected to `/#/admin` if trying to access protected pages.
+
+---
+
+## 📸 Example Admin Workflow
+
+1. Go to: (https://prosync-website-1.onrender.com/#/admin)
+2. Login with provided credentials
+3. Navigate to `/#/add-projects`
+4. Fill the form with:
+   - Project Image
+   - Name
+   - Description
+5. Submit → See the new project appear on homepage instantly!
+
+---
+
+## 🌐 Folder Structure
+
+```bash
 prosync-website/
-├── frontend/       # React frontend
-│   └── pages/
+├── frontend/          # React frontend
+│   ├── pages/
 │   └── components/
-├── backend/        # Node.js + Express API
-│   └── routes/
-│   └── models/
-│   └── middleware/
+├── backend/           # Node.js + Express API
+│   ├── routes/
+│   ├── models/
+│   ├── middleware/
 │   └── server.js
-💻 Run Locally
-🔹 1. Clone the Project
-bash
-Copy
-Edit
-git clone https://github.com/your-username/prosync-website.git
-cd prosync-website
-🔹 2. Setup Backend
-bash
-Copy
-Edit
-cd backend
-npm install
-Create .env file
-env
-Copy
-Edit
-PORT=8000
-ATLASDB_URL=your_mongodb_url
-CLOUDINARY_CLOUD_NAME=your_name
-CLOUDINARY_API_KEY=your_key
-CLOUDINARY_API_SECRET=your_secret
-bash
-Copy
-Edit
-npm run dev
-➡️ Runs at: http://localhost:8000
-
-🔹 3. Setup Frontend
-bash
-Copy
-Edit
-cd frontend
-npm install
-npm start
-➡️ Runs at: http://localhost:3000
-
-🔗 Deployed URLs
-Module	Link
-🌐 Frontend	https://prosync-client.onrender.com
-⚙️ Backend API	https://prosync-api.onrender.com
-
-📸 Example Admin Workflow
-Go to /admin
-
-Login using:
-
-Username: Tanisha
-
-Password: Tanisha@0611
-
-Access /addproject form
-
-Upload a new project with:
-
-Image
-
-Project Name
-
-Project Description
-
-See the new project auto-rendered on homepage.
-
-📌 Notes
-All uploaded images are stored in Cloudinary under the folder ProSyncClients
-
-Backend is deployed on Render
-
-Clean, elegant responsive UI built using Tailwind CSS
-
-Admin session automatically expires after time limit
